@@ -1,65 +1,128 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-green-50 text-gray-800">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-green-800 to-green-600 text-white py-20 px-6 text-center">
+        <h1 className="text-5xl font-bold mb-4">
+          SwadKart
+        </h1>
+        <p className="text-2xl mb-4">
+          Nature Se Seedha Aap Tak
+        </p>
+        <p className="max-w-2xl mx-auto text-lg">
+          Premium Quality Spices, Dry Fruits & Healthy Foods
+          delivered with purity, freshness and trust.
+        </p>
+
+        <a
+          href="https://www.facebook.com/people/SwadKart/61590928815698/"
+          target="_blank"
+          className="inline-block mt-8 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-lg"
+        >
+          Visit Our Facebook Page
+        </a>
+      </section>
+
+      {/* About */}
+      <section className="py-16 px-6 text-center">
+        <h2 className="text-4xl font-bold text-green-800 mb-6">
+          Welcome to SwadKart
+        </h2>
+
+        <p className="max-w-3xl mx-auto text-lg">
+          SwadKart brings premium spices, dry fruits, seeds and healthy food
+          products directly to your home. Our mission is to provide natural,
+          hygienically packed and high-quality products at affordable prices.
+        </p>
+      </section>
+
+      {/* Products */}
+      <section className="py-16 bg-white px-6">
+        <h2 className="text-4xl font-bold text-center text-green-800 mb-12">
+          Our Product Range
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="bg-green-100 rounded-xl p-8 text-center shadow">
+            <h3 className="text-2xl font-bold mb-4">🌶️ Spices</h3>
+            <p>
+              Haldi Powder, Lal Mirch Powder, Jeera, Ajwain,
+              Choti Elaichi and more.
+            </p>
+          </div>
+
+          <div className="bg-green-100 rounded-xl p-8 text-center shadow">
+            <h3 className="text-2xl font-bold mb-4">🥜 Dry Fruits</h3>
+            <p>
+              Almonds, Cashews, Raisins, Pistachios,
+              Walnuts and premium dry fruits.
+            </p>
+          </div>
+
+          <div className="bg-green-100 rounded-xl p-8 text-center shadow">
+            <h3 className="text-2xl font-bold mb-4">🌱 Seeds & Healthy Foods</h3>
+            <p>
+              Flax Seeds, Pumpkin Seeds, Chia Seeds and
+              healthy nutrition products.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Features */}
+      <section className="py-16 px-6">
+        <h2 className="text-4xl font-bold text-center text-green-800 mb-12">
+          Why Choose Us?
+        </h2>
+
+        <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="bg-white p-6 rounded-xl shadow text-center">
+            <h3 className="font-bold text-xl">100% Natural</h3>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow text-center">
+            <h3 className="font-bold text-xl">Premium Quality</h3>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow text-center">
+            <h3 className="font-bold text-xl">Hygienically Packed</h3>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow text-center">
+            <h3 className="font-bold text-xl">Fresh & Trusted</h3>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Contact */}
+      <section className="bg-green-800 text-white py-16 px-6 text-center">
+        <h2 className="text-4xl font-bold mb-6">Contact Us</h2>
+
+        <p className="text-xl mb-3">
+          📍 New Delhi, India
+        </p>
+
+        <p className="text-xl mb-3">
+          📞 +91 8471009169
+        </p>
+
+        <p className="text-xl mb-6">
+          🌐 SwadKart
+        </p>
+
+        <a
+          href="https://wa.me/918471009169"
+          target="_blank"
+          className="bg-yellow-500 text-black px-6 py-3 rounded-lg font-bold"
+        >
+          WhatsApp Us
+        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-black text-white text-center py-6">
+        © 2026 SwadKart | Nature Se Seedha Aap Tak
+      </footer>
+    </main>
   );
 }
