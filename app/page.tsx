@@ -1,87 +1,117 @@
-```tsx
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <div>
+    <main>
       {/* Hero Section */}
       <section
         style={{
-          backgroundColor: "#059669",
+          background: "#0a8f3d",
           color: "white",
           textAlign: "center",
-          padding: "80px 20px",
+          padding: "60px 20px",
         }}
       >
-        <h1 style={{ fontSize: "72px", fontWeight: "bold" }}>SwadKart</h1>
+        <Image
+          src="/logo.png"
+          alt="SwadKart Logo"
+          width={250}
+          height={250}
+          style={{ margin: "0 auto" }}
+        />
 
-        <h2 style={{ fontSize: "32px", marginTop: "10px" }}>
+        <h1
+          style={{
+            fontSize: "4rem",
+            fontWeight: "bold",
+            marginTop: "20px",
+          }}
+        >
+          SwadKart
+        </h1>
+
+        <h2 style={{ marginTop: "10px" }}>
           Nature Se Seedha Aap Tak
         </h2>
 
         <p
           style={{
-            fontSize: "18px",
             maxWidth: "800px",
-            margin: "30px auto",
+            margin: "20px auto",
+            fontSize: "20px",
           }}
         >
-          Premium Quality Spices, Dry Fruits & Healthy Foods delivered with
-          purity, freshness and trust.
+          Premium Quality Spices, Dry Fruits, Seeds &
+          Healthy Foods Delivered With Purity,
+          Freshness and Trust.
         </p>
-
-        <a
-          href="https://www.facebook.com/people/SwadKart/61590928815698/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button
-            style={{
-              backgroundColor: "#fbbf24",
-              color: "black",
-              padding: "15px 30px",
-              fontSize: "18px",
-              fontWeight: "bold",
-              border: "none",
-              borderRadius: "10px",
-              cursor: "pointer",
-            }}
-          >
-            Visit Our Facebook Page
-          </button>
-        </a>
       </section>
 
       {/* About Section */}
       <section
         style={{
-          backgroundColor: "#ecfdf5",
+          padding: "60px 20px",
           textAlign: "center",
-          padding: "80px 20px",
+          background: "#f5f5f5",
         }}
       >
-        <h2
-          style={{
-            color: "#047857",
-            fontSize: "48px",
-            fontWeight: "bold",
-          }}
-        >
+        <h2 style={{ color: "#0a8f3d" }}>
           Welcome to SwadKart
         </h2>
 
         <p
           style={{
-            maxWidth: "1000px",
-            margin: "30px auto",
+            maxWidth: "900px",
+            margin: "20px auto",
             fontSize: "18px",
-            lineHeight: "1.8",
           }}
         >
-          SwadKart brings premium spices, dry fruits, seeds and healthy food
-          products directly to your home. Our mission is to provide natural,
-          hygienically packed and high-quality products at affordable prices.
+          SwadKart brings premium spices, dry fruits,
+          seeds and healthy food products directly
+          to your home. We focus on purity, freshness
+          and customer satisfaction.
         </p>
       </section>
-    </div>
+
+      {/* Contact Section */}
+      <section
+        style={{
+          padding: "60px 20px",
+          textAlign: "center",
+          background: "#ffffff",
+        }}
+      >
+        <h2 style={{ color: "#0a8f3d" }}>
+          Contact Us
+        </h2>
+
+        <p>
+          📱 WhatsApp:
+          <a
+            href="https://wa.me/918471009169"
+            target="_blank"
+            style={{
+              color: "#0a8f3d",
+              marginLeft: "8px",
+            }}
+          >
+            +91 8471009169
+          </a>
+        </p>
+
+        <p>
+          📧 Email:
+          <a
+            href="mailto:roshkiran02@gmail.com"
+            style={{
+              color: "#0a8f3d",
+              marginLeft: "8px",
+            }}
+          >
+            roshkiran02@gmail.com
+          </a>
+        </p>
+      </section>
+    </main>
   );
 }
-```
