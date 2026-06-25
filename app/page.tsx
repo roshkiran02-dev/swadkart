@@ -1,100 +1,112 @@
+```tsx
 export default function Home() {
-  return (
-    <main>
-      {/* Cover Banner */}
-      <img
-        src="/Cover.jpg"
-        alt="SwadKart Cover"
-        style={{
-          width: "100%",
-          height: "auto",
-          display: "block",
-        }}
-      />
+  const products = [
+    { name: "Haldi Powder", price: "₹55", weight: "200g" },
+    { name: "Lal Mirch Powder", price: "₹65", weight: "200g" },
+    { name: "Jeera", price: "₹90", weight: "200g" },
+    { name: "Ajwain", price: "₹90", weight: "200g" },
+    { name: "Choti Elaichi", price: "₹850", weight: "200g" },
+    { name: "Stevia", price: "₹399", weight: "200g" },
+  ];
 
-      {/* Content Section */}
-      <section
+  return (
+    <main style={{ padding: "20px", background: "#f8fff8" }}>
+      <h1 style={{ textAlign: "center", color: "green" }}>
+        SwadKart
+      </h1>
+
+      <p style={{ textAlign: "center" }}>
+        Nature Se Seedha Aap Tak
+      </p>
+
+      <div
         style={{
-          padding: "50px 20px",
-          textAlign: "center",
-          background: "#f8fff8",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+          gap: "20px",
+          marginTop: "30px",
         }}
       >
-        <h1
-          style={{
-            color: "#0a7a2f",
-            fontSize: "48px",
-            marginBottom: "15px",
-          }}
-        >
-          SwadKart
-        </h1>
-
-        <h2 style={{ color: "#444", marginBottom: "20px" }}>
-          Nature Se Seedha Aap Tak
-        </h2>
-
-        <p
-          style={{
-            maxWidth: "800px",
-            margin: "0 auto",
-            fontSize: "20px",
-            lineHeight: "1.8",
-          }}
-        >
-          Premium Quality Spices, Dry Fruits, Seeds & Healthy Foods.
-          Fresh, Natural and Hygienically Packed Products Delivered to
-          Your Home.
-        </p>
-
-        {/* Buttons */}
-        <div
-          style={{
-            marginTop: "40px",
-            display: "flex",
-            justifyContent: "center",
-            gap: "20px",
-            flexWrap: "wrap",
-          }}
-        >
-          <a
-            href="https://www.facebook.com/people/SwadKart/61590928815698/"
-            target="_blank"
+        {products.map((product, index) => (
+          <div
+            key={index}
             style={{
+              border: "1px solid #ddd",
+              padding: "15px",
+              borderRadius: "12px",
+              background: "#fff",
+              textAlign: "center",
+            }}
+          >
+            <h2>{product.name}</h2>
+
+            <p><b>{product.price}</b></p>
+            <p>{product.weight}</p>
+
+            <a
+              href="https://wa.me/918471009169"
+              target="_blank"
+            >
+              <button
+                style={{
+                  background: "green",
+                  color: "white",
+                  padding: "10px",
+                  border: "none",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                }}
+              >
+                Order on WhatsApp
+              </button>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "40px",
+        }}
+      >
+        <a
+          href="https://www.facebook.com/people/SwadKart/61590928815698/"
+          target="_blank"
+        >
+          <button
+            style={{
+              margin: "10px",
+              padding: "12px 20px",
               background: "#1877F2",
               color: "white",
-              padding: "15px 30px",
-              borderRadius: "10px",
-              textDecoration: "none",
-              fontWeight: "bold",
+              border: "none",
+              borderRadius: "8px",
             }}
           >
-            Order on Facebook
-          </a>
+            Facebook
+          </button>
+        </a>
 
-          <a
-            href="https://www.instagram.com/swadkart02/"
-            target="_blank"
+        <a
+          href="https://www.instagram.com/swadkart02/"
+          target="_blank"
+        >
+          <button
             style={{
+              margin: "10px",
+              padding: "12px 20px",
               background: "#E1306C",
               color: "white",
-              padding: "15px 30px",
-              borderRadius: "10px",
-              textDecoration: "none",
-              fontWeight: "bold",
+              border: "none",
+              borderRadius: "8px",
             }}
           >
-            Order on Instagram
-          </a>
-        </div>
-
-        {/* Contact */}
-        <div style={{ marginTop: "40px" }}>
-          <h3>Contact Us</h3>
-          <p>📱 WhatsApp: +91 8471009169</p>
-          <p>📧 Email: roshkiran02@gmail.com</p>
-        </div>
-      </section>
+            Instagram
+          </button>
+        </a>
+      </div>
     </main>
   );
 }
+```
